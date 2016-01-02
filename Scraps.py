@@ -128,9 +128,9 @@ def main(jobs):
 
     username = raw_input("please enter your Plotly Username: \n")
     api_key = raw_input("please enter your Plotly Api Key: \n")
-
+    state = "CA"
     for job in jobs:
-            url = "http://www.indeed.com/jobs?q=" + str(job) + "&l=CA&rq=1&fromage=last"
+            url = "http://www.indeed.com/jobs?q=" + str(job) + "&l="+ str(state)+ "&rq=1&fromage=last"
             response = u.urlopen(url)
 
             response = response.read()
